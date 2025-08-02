@@ -1,0 +1,14 @@
+// Миксин для ограничения количества строк текста с троеточием
+@mixin text-truncate-lines($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+// Примеры использования:
+// @include text-truncate-lines(1); // Одна строка
+// @include text-truncate-lines(2); // Две строки
+// @include text-truncate-lines(3); // Три строки

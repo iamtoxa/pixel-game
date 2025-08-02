@@ -1,0 +1,66 @@
+.alertMessageWrapper {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 1300;
+    width: 100%;
+    pointer-events: none;
+}
+
+.alertMessage {
+    background: #fff;
+    color: #383838;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #00000010;
+    font-weight: 500;
+    font-family: 'Montserrat', 'Montserrat Fallback';
+    min-width: 0;
+    width: fit-content;
+    height: 36px;
+    padding: 0 12px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    pointer-events: all;
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.closeBtn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    line-height: 1;
+    padding: 0 4px;
+    border-radius: 4px;
+    transition: background 0.15s;
+}
+
+.closeBtn:hover {
+    background: #f0f0f0;
+    color: #383838;
+}

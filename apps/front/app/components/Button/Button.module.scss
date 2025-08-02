@@ -1,0 +1,114 @@
+.button {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+
+    --color: var(--color-primary);
+    --text: white;
+    transition: 0.1s ease all;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 20px;
+
+    &:disabled {
+        pointer-events: none;
+        --color: #C7D1BC;
+        
+        > * {
+            opacity: 1 !important;
+        }
+    }
+
+    &:active {
+        --color: var(--color-primary-dark);
+    }
+
+
+    &_longPress {
+        &:active {
+            scale: 0.95;
+            filter: brightness(0.95);
+            transition: 1s ease scale, 0.2s 1s ease filter;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+    }
+
+    &_default {
+        background: #F1F1F1 !important;
+        color: #464646 !important;
+        border-color: transparent;
+
+        &:hover {
+            background: var(--color) !important;
+            color: var(--text) !important;
+        }
+    }
+
+    &_fill {
+        background: var(--color) !important;
+        color: var(--text) !important;
+    }
+
+    &_outline {
+        border-color: var(--color) !important;
+        color: var(--color) !important;
+
+        &:hover {
+            background: var(--color);
+            color: var(--text) !important;
+        }
+    }
+
+    &_sm {
+        height: 40px;
+        padding: 0 16px;
+
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 800;
+
+        .button__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &_md {
+        height: 56px;
+        padding: 0 20px;
+
+        font-size: 18px;
+        line-height: 120%;
+        font-weight: 800;
+
+        .button__icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &_lg {
+        height: 44px;
+        padding: 0 24px;
+
+        font-size: 18px;
+        line-height: 120%;
+        font-weight: 500;
+
+        .button__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
