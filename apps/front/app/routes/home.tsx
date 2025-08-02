@@ -1,3 +1,5 @@
+import Hotbar from "@/gameHUD/Hotbar";
+
 export function meta({}) {
   return [
     { title: "New React Router App" },
@@ -6,5 +8,10 @@ export function meta({}) {
 }
 
 export default function Home() {
-  return null;
+
+  return (
+    <div>
+      <Hotbar/>
+    </div>
+  );
 }

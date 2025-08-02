@@ -1,0 +1,18 @@
+.slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #555;
+    background: #ffffff20;
+    
+    &_active {  
+        border-color: #fff;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+}
