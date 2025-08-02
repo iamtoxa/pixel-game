@@ -1,3 +1,4 @@
+import GameCanvas from "@/components/GameCanvas";
 import Hotbar from "@/gameHUD/Hotbar";
 
 export function meta({}) {
@@ -11,6 +12,8 @@ export default function Home() {
 
   return (
     <div>
+      <GameCanvas/>
+      
       <Hotbar/>
     </div>
   );

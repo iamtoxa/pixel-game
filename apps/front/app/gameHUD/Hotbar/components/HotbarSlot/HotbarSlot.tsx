@@ -1,7 +1,7 @@
 import { useMemo, type FC } from "react";
 import classNames from "classnames";
 
-import styles from './ShadowSlot.module.scss';
+import styles from './HotbarSlot.module.scss';
 import Image from "@/components/Image";
 import { observer } from "mobx-react-lite";
 import { gameState } from "@/state/gameState";

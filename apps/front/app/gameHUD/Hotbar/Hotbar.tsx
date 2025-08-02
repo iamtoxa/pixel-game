@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, type FC } from "react";
 
 import styles from './Hotbar.module.scss';
-import ShadowSlot from "./components/ShadowSlot";
+import HotbarSlot from "./components/HotbarSlot";
 import { gameState } from "@/state/gameState";
 
 const hotbarLength = 9;
@@ -9,7 +9,7 @@ const hotbarLength = 9;
 const Hotbar: FC = () => {
     const slots = useMemo(() => {
         return ([...new Array(hotbarLength)]).map((_,index) => (
-            <ShadowSlot
+            <HotbarSlot
                 key={index+1}
                 hotbarIndex={index+1}
             />
